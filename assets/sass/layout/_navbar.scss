@@ -1,0 +1,127 @@
+// mobile
+
+.navigation {
+  position: relative;
+  /* height: 18vh; */
+  height: 120px;
+  background-color: white;
+
+  &__container {
+    display: inline-block;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &__log {
+    position: absolute;
+    width: 220px;
+    height: 100%;
+    text-align: center;
+    padding-left: 2em;
+    padding-top: 1.7em;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline;
+    float: left;
+    background-color: white;
+    
+    & a {
+      display: block;
+      padding: 1.5em;
+      text-align: left;
+      color: black;  
+  
+      &:hover {
+        color: grey;
+      }
+    }
+  }
+}
+
+
+.collapsible { 
+  text-align: right; 
+  
+  label { 
+  display: block; 
+  padding-top: 1em; 
+  padding-bottom: .5em; 
+  padding-right: 1.5em; 
+  font-size: 2rem; 
+  } 
+} 
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .navigation__container { 
+  max-height: 100%; 
+} 
+
+
+// tablet
+
+@media (min-width: 768px){
+
+  .navigation {
+      width: 100%;
+      height: 120px;
+      /* height: 18vh; */
+  
+
+    &__log {
+      height: 100%;
+      width: 280px;
+      padding-left: 4em;
+      padding-top: 1.3em;
+      text-align: center;
+    }
+
+    &__container {
+      max-height: 100%;
+      padding: .3em 1em .3em 0;
+      overflow: visible;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      margin: inherit;
+      padding: inherit;
+    }
+    
+    &__item {
+      background-color: white;
+
+      a {
+        font-size: 1.3em;
+      }
+    }
+    
+  }
+
+  .collapsible {
+      label {
+          display: none;
+    }
+  }
+}
+
+.last a{
+  padding-right: 0;
+}
+  
+
+
